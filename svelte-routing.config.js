@@ -1,3 +1,1 @@
-module.exports = {
-  useCss: true,
-};
+module.exports = {};

@@ -9,6 +9,7 @@ application.use(ssr.serveBuildDir);
 application.get('*', (req, res) =>
   res.send(
     ssr.renderToString({
+      dev: true,
       url: req.url,
     })
   )

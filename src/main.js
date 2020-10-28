@@ -1,6 +1,10 @@
-import App from "./App.svelte";
+import App from './App.svelte';
+
+const $app = document.getElementById('app');
 
 new App({
-  target: document.getElementById("app"),
-  hydrate: true
+  target: $app,
+  hydrate: true,
 });
+
+if (!isProduction) $app.classList.add('debug-screens');
